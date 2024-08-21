@@ -96,7 +96,10 @@ import {
   sleep,
 } from '../test-utils';
 import { delay } from '../utils';
-import { LEGACY_ENCRYPTION_KEY_DERIVATION_OPTIONS } from './constants';
+import {
+  LEGACY_ENCRYPTION_KEY_DERIVATION_OPTIONS,
+  PERMITTED_CHAINS_ENDOWMENT,
+} from './constants';
 import { SnapsRegistryStatus } from './registry';
 import type { SnapControllerState } from './SnapController';
 import {
@@ -4676,7 +4679,7 @@ describe('SnapController', () => {
         'endowment:ethereum-provider': {
           caveats: [],
         },
-        permittedChains: {},
+        [PERMITTED_CHAINS_ENDOWMENT]: {},
       };
 
       expect(messenger.call).toHaveBeenCalledWith(
