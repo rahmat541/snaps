@@ -120,8 +120,8 @@ import type {
 } from '../services';
 import type {
   EncryptionResult,
-  type ExportableKeyEncryptor,
-  type KeyDerivationOptions,
+  ExportableKeyEncryptor,
+  KeyDerivationOptions,
 } from '../types';
 import {
   fetchSnap,
